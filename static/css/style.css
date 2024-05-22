@@ -16,6 +16,18 @@ html,body{ /*размер страницы всё видимое окно бра
     height: 100%;
 }
 
+.empty_block{
+    width:100%;
+    height:70px;
+}
+
+/*logo*/
+.logo img{/*прописывам логотип*/
+    float:left;
+    margin-left: 80px;
+    width: 200px;
+}
+
 /*MENU*/
 
 .header{
@@ -62,6 +74,79 @@ html,body{ /*размер страницы всё видимое окно бра
     margin: 100px auto 0; /* отступить 60 px от верха */
     flex: 1 0 auto; /* выровнять текст по центру */
 }
+
+/* MAIN PAGE */
+.info{
+    display: flex;
+    width: 80%; /*размер блока (контента на главной странице) */
+    /*в margin аргументы: 1-top 2-left 3-reight 4-top  (но можно как в примере ниже бока записать как auto)
+    чтобы равномерно поделить отступы или иными слвами сделать по середине*/
+    margin: 80px auto 0; /* эта строка выравнивает блок по середине страницы */
+    box-shadow: -5px 15px 10px skyblue;
+    align-items: center;
+    border-radius: 200px;
+    font-family: monospace;
+    /*border: 2px solid red;*/ /* используй красные бордеры для отладки и определения элемена */
+}
+
+.description{
+    font-size: 40px;
+    margin: 0 auto;
+    text-align: right; /*? нужен или нет*/
+}
+
+.names{ /*верхняя плашка в которой написано "Mike do IT - fullstack разработка"*/
+    box-shadow: -5px 15px 10px skyblue;
+    border-radius: 200px;
+    padding: 10px 20px; /*отступы текста (сверху и снизу по 10 по бокам 20)*/
+    letter-spacing: 3px;
+    margin-bottom: 20px; /* отталкивает нижние плашки от заголовка */
+}
+
+
+.desc{/*нижние плашки (html,css,python и т.д.)*/
+    width: 100%;
+    font-width: 600px;
+    color: dodgerblue;
+    margin: 0 auto;
+    text-align: center;
+    box-shadow: 0px 0px 0px skyblue;
+    border-radius: 200px;
+}
+
+.desc li{
+    margin-bottom: 10px;
+    font-style: normal;
+    box-shadow: 5px 3px 10px grey;
+    font-size: 25px;
+    padding: 5px;
+    font-family: monospace;
+    font-size: 20px;
+    border-radius: 200px;
+    letter-spacing: 2px;
+    list-style: none;
+}
+
+ul.checkmark li:before {
+    content: "\2713\0020"; /*рисует зеленые галочки на кнопках*/
+    color: forestgreen;
+}
+
+
+.checkmark li{
+    list-style: none;
+}
+
+.checkmark li:hover{
+    transition-duration: 0.1s;
+    box-shadow: 0px 12px 10px orange;
+}
+
+ul a{ /*настройка всех тегов <a>*/
+    text-decoration: none;
+    color: mediumaquamarine;
+}
+
 
 /*FOOTER*/
 .footer{
